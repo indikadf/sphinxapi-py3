@@ -13,7 +13,7 @@ This lib is now used in several projects and may be considered as quite stable a
 ### Installation
 
 ```sh
-pip install https://github.com/a1tus/sphinxapi-py3/zipball/master
+pip install sphinxapi-py3
 ```
 
 ### Using

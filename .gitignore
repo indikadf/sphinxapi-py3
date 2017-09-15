@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+
+.idea/
+build_and_upload.sh
+
 __pycache__/
 *.py[cod]
 
