@@ -974,7 +974,6 @@ class SphinxClient:
                 cleaned_res.append(r.decode())
         return cleaned_res
 
-
     def UpdateAttributes(self, index, attrs, values, mva=False, ignorenonexistent=False):
         """
         Update given attribute values on given documents in given indexes.
