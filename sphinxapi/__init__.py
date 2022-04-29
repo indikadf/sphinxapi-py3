@@ -964,7 +964,16 @@ class SphinxClient:
             pos += length
 
         # decode to str
-        return [r.decode() for r in res]
+        cleaned_res = []
+        for r in res:
+            try:
+                cleaned_res.append(r.decode())
+            except UnicodeDecodeError as e:
+                # replace problematic char with space seems safe
+                r = r[:e.start] + b' ' + r[e.start+1:]
+                cleaned_res.append(r.decode())
+        return cleaned_res
+
 
     def UpdateAttributes(self, index, attrs, values, mva=False, ignorenonexistent=False):
         """
